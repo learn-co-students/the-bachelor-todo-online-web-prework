@@ -7,7 +7,7 @@
 2. Practice iterating over nested hashes
 
 ## Background
-
+z
 [The Bachelor](http://en.wikipedia.org/wiki/The_Bachelor_%28U.S._TV_series%29) is a dating show that has celebrated over 19 seasons. As it turns out, your best friend is obsessed with The Bachelor and keeps asking you really strange questions, like, "What was the name of that girl who was a cruise ship singer?". 
 
 You decided to [scrape](http://ruby.bastardsbook.com/chapters/html-parsing/) (more on scraping in an upcoming unit) Wikipedia to get all the info on seasons 9 - 19 to help her answer these burning questions. Your task now is to create methods that navigate through this massive amount of data to find answers to her questions.
