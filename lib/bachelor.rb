@@ -43,15 +43,3 @@ def get_occupation(data, hometown)
     end 
   end
 end
-
-def get_average_age_for_season(data, season)
-   total = 0 
-  total_num = 0 
-  data[season].each do |hash|
-    
-    total_age += hash["age"].to_i
-    total_num += 1
-  end 
-
-  avg = (total_age.to_f / total_num.to_f).round
-end
