@@ -1,7 +1,14 @@
 def get_first_name_of_season_winner(data, season)
-  # code here
+  data.each do |season, portfolio|
+    portfolio.each do |description, values|
+      if values == "Winner"
+        puts
+      end
+    end
+  end
 end
-
+end
+end
 def get_contestant_name(data, occupation)
   # code here
 end
