@@ -43,15 +43,14 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-Array = []
+    answer = 0
+    i=0
   data[season].select do |person_data|
-answer= person_data["age"].to_f
-array <<answer
-
-array.average
-return array
-end
-
+    answer  += person_data["age"].to_f
+    i+=1
+  end
+roundint=answer/i
+roundint.round
 end
 
 
