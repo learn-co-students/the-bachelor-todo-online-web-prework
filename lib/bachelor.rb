@@ -2,10 +2,20 @@ require 'pry'
 
 def get_first_name_of_season_winner(data, season)
   #data is everything, season is the season number
-  data.each do |season_num, info|
+  first_name = ""
+
+  data.map do |season_num, info|
     # season_num is the season 30, info is all the season info
-  binding.pry
+  when season == season_num
+
+
+
+
+binding.pry
+
+
 end
+  end
 end
 
 def get_contestant_name(data, occupation)
