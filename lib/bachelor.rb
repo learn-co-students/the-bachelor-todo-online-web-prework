@@ -58,5 +58,22 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  # code here
+  age_array = []
+  result = 0
+
+  data.map do |season_num, info|
+    # season_num is the season 30, info is all the season info
+    info.map do |hash|
+      age_array << hash["age"].to_i
+
+      age_array.map do |num|
+        result = result + num
+      end
+      avg = result / age_array.length
+
+        age_array = avg
+
+    end
+  end
+
 end
