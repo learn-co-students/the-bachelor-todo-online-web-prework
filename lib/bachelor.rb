@@ -66,7 +66,7 @@ def get_average_age_for_season(data, season)
     info.map do |hash|
       age_array << hash["age"].to_i
 
-      age_array.map do |num|
+      age_array do |num|
         result = result + num
       end
       avg = result / age_array.length
