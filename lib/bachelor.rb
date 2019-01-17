@@ -59,21 +59,19 @@ end
 
 def get_average_age_for_season(data, season)
   age_total = 0
-  ppl = 0
+
+
 
   data.map do |season_num, info|
     # season_num is the season 30, info is all the season info
 
-     data[season].each do |ppl|
+     data[season].each do |person|
 
-       age_total += (ppl["age"]).to_f
-
+       age_total += person["age"].to_f
       end
 
-      avg_age = age_total /(data[season].count)
-binding.pry
-
+      age_total /(data[season].count).round
 
 end
-avg_age
+
 end
