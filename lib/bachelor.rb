@@ -10,8 +10,8 @@ if season == season_num
     info.map do |hash|
     if hash["status"] == "Winner"
       first_name = hash["name"]
-       first_name.split(" ").first
-
+       final = first_name.split(" ").first
+       final.compact
 
 
     end
