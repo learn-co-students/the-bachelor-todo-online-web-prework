@@ -2,7 +2,7 @@ require 'pry'
 
 def get_first_name_of_season_winner(data, season)
   #data is everything, season is the season number
-
+  final = ""
   data.map do |season_num, info|
     # season_num is the season 30, info is all the season info
 
@@ -10,15 +10,14 @@ if season == season_num
     info.map do |hash|
     if hash["status"] == "Winner"
       first_name = hash["name"]
-       final = first_name.split(" ").first
-       final.compact
-
+       final << first_name.split(" ").first
 
     end
+
   end
 end
   end
-
+final
 end
 
 def get_contestant_name(data, occupation)
