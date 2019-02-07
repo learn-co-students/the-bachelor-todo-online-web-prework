@@ -71,7 +71,6 @@ def get_average_age_for_season(data, season)
           if stats == "age"
             age_total += contestant_hsh["age"].to_f
             contestant_number += 1
-            
           end
         end
       end
