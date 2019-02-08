@@ -1,5 +1,3 @@
-require 'pry'
-
 def get_first_name_of_season_winner(data, season)
   data.each do |year, contestant|
     if year == season
@@ -25,9 +23,7 @@ end
 def count_contestants_by_hometown(data, hometown)
   hometown_counter = 0
   data.each do |year, contestant|
-    contestant.each do |who|
-      hometown_counter += 1 if who["hometown"] == hometown
-    end
+    contestant.each { |who| hometown_counter += 1 if who["hometown"] == hometown }
   end
   hometown_counter
 end
@@ -47,9 +43,7 @@ def get_average_age_for_season(data, season)
   avg_arr = []
   data.each do |year, contestant|
     if year == season
-      contestant.each do |who|
-        avg_arr << who["age"].to_i
-      end
+      contestant.each { |who| avg_arr << who["age"].to_i }
     end
   end
   (avg_arr.reduce(:+).to_f / avg_arr.size).round
