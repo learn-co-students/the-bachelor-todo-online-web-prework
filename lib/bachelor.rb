@@ -73,6 +73,13 @@ def get_average_age_for_season(data, season)
     (total_age / num_contestants.to_f).round(0)    
 end 
 
+# Take away from last method... the rspec tests will throw itegers and 
+# floats at this and expect method to round like regular math, not like
+# the rounding done in code. Bottom line, the code above allows for those
+# monkey wrench challenges by implementing .to_i on line 71 and then .to_f 
+# followed by .round(0) on line 73. 
+
+# Pieces of previous code below:
 
 #age_num_array << contestant_info["age"].to_i
 
@@ -81,7 +88,16 @@ end
 #age_num_array.inject{ |sum, el| sum + el }.to_f  / age_num_array.size
 
 
+#def get_average_age_for_season(data, season)
+# age_num_array = []
+# data[season].each do |contestant_info|
+#   age_num_array << contestant_info["age"].to_i
+# end
+#   total_age = 0
+#   age_num_array.each {|age| total_age = total_age + age}
 
+# total_age / age_num_array.size
+#end
 
 
 
