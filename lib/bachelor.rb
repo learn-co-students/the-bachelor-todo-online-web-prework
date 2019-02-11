@@ -64,7 +64,22 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  # code here
+  age_num_array = []
+  data[season].each do |contestant_info|
+    age_num_array << contestant_info["age"].to_i
+    
+  end
+  age_num_array.inject{ |sum, el| sum + el } / age_num_array.size
+  
+  #binding.pry 
 end
+
+
+
+
+
+#contestant_info.each do |info_key, info_value|
+
+
 
 
