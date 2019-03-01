@@ -3,19 +3,24 @@ require "pry"
 def get_first_name_of_season_winner(data, season)
   winner = ""
   data[season].each {|contestant|
-    binding.pry
     if contestant["status"] == "Winner"
       winner = contestant["name"].split(" ")[0]
     end
   }
   
-  winner
-  
-  # expecting just string first name of the winner
+  return winner
 end
 
 def get_contestant_name(data, occupation)
-  # code here
+  data.each {|season, v|
+    binding.pry
+    v.each {|contestant|
+      if contestant[occupation] == occupation
+        
+      end
+    }
+  }
+  
 end
 
 def count_contestants_by_hometown(data, hometown)
