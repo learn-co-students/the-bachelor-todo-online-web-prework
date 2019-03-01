@@ -1,5 +1,17 @@
+require "pry"
+
 def get_first_name_of_season_winner(data, season)
-  # code here
+  winner = ""
+  data[season].each {|contestant|
+    binding.pry
+    if contestant["status"] == "Winner"
+      winner = contestant["name"].split(" ")[0]
+    end
+  }
+  
+  winner
+  
+  # expecting just string first name of the winner
 end
 
 def get_contestant_name(data, occupation)
