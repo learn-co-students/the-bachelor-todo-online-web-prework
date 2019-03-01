@@ -13,14 +13,15 @@ end
 
 def get_contestant_name(data, occupation)
   data.each {|season, contestant_data|
-    binding.pry
+    contestant_match = ""
     contestant_data.each {|contestant|
-    binding.pry
       if contestant["occupation"] == occupation
-        
+        contestant_match = contestant["name"]
       end
     }
   }
+  
+  contestant_match
   
 end
 
