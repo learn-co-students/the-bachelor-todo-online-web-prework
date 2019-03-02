@@ -27,18 +27,21 @@ end
 
 def count_contestants_by_hometown(data, hometown)
   hometown_results = []
-  data.map {|season, contestant_data|
+  data.each {|season, contestant_data|
     contestant_data.each {|contestant| 
       if contestant["hometown"] == hometown
         hometown_results << contestant
       end
     }
-  }.flatten.length
+  }
+  
   hometown_results.length
 end
 
 def get_occupation(data, hometown)
-  
+  data.each {|season, contestant_data|
+    binding.pry
+  }
 end
 
 def get_average_age_for_season(data, season)
