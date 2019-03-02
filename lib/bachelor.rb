@@ -55,5 +55,6 @@ def get_average_age_for_season(data, season)
     contestant["age"].to_i
   }
   
-  total.sum / data[season].length
+  total.inject{ |sum, el| sum + el } / total.length
+  
 end
