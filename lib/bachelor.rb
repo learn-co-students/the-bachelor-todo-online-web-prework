@@ -1,4 +1,10 @@
 def get_first_name_of_season_winner(data, season)
+  data.map do |season, info|
+    season.map do |info, string|
+      if string == "Winner"
+        puts [:name]
+      end
+  data
   # code here
 end
 
