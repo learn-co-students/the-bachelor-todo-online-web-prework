@@ -19,7 +19,7 @@ data = JSON.parse(File.read('spec/fixtures/contestants.json'))
 
 # Find first name of season winner based on input season
 def get_first_name_of_season_winner(data, season)
-  data.fetch(season).each do |person| 
+  data[season].each do |person| 
     return person["name"].split.first if person["status"] == "Winner"
   end
 end
@@ -61,10 +61,10 @@ def get_average_age_for_season(data, season)
   average = 0
   
   # Get ages
-  data.fetch(season).each do |person| 
+  data[season].each do |person| 
     age_array << person["age"].to_f
   end 
-
+  
   # Average and round ages
   average = (age_array.sum / age_array.length).round
 end
