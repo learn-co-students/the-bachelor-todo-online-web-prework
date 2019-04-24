@@ -3,13 +3,11 @@ require 'pry'
 def get_first_name_of_season_winner(data, season)
   winner = [ ]
   data.fetch(season).each do |person|
-    if person.include?("status":"Winner") == true
-        winner << "name"
-    binding.pry
-      
+    if person["status"] == "Winner"
+      winner << person["name"]
     end
   end  
-  return winner.join
+  return winner.join.split(" ")[0]
 end
 
 def get_contestant_name(data, occupation)
