@@ -52,7 +52,7 @@ def get_average_age_for_season(data, season)
   ages =[ ]
   data.fetch(season).each do |person|
     ages << person["age"]
-  
-  end
-  return ages  
+    end
+  ages = ages.map {|i| i.to_i}
+    return ages.average
 end
